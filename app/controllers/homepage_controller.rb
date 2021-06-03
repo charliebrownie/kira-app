@@ -9,11 +9,11 @@ class HomepageController < ApplicationController
 
   private
   def all_answers
-    params.permit(:answer1, :answer2, :answer3)
+    params.permit(:answer1, :answer2, :answer3, :answer4, :answer5, :answer6, :answer7)
   end
 
   def calculations
-    right_answers = ["まじ", "しいざあ", "てぃな"]
+    right_answers = ["まじ", "しいざあ", "てぃな", "ぷう", "ありえる", "あだむ", "しょーん"]
     score = 0
     answers = all_answers
     answers.each{|key, value|
@@ -25,5 +25,4 @@ class HomepageController < ApplicationController
     }
     score
   end
-
 end

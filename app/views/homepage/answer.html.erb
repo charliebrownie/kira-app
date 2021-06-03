@@ -2,18 +2,26 @@
 <div class = "gray-line">
   <p class="c-title">解答</p>
   <p> 1. 本気</p>
-  <p>正解は「まじ」。あなたの解答は「<%= @answers[:answer1] %>」でした。</p>
+  <p>正解は「まじ」。<br>あなたの解答は「<%= @answers[:answer1] %>」でした。</p>
   <p>2. 皇帝</p>
-  <p>正解は「しいざあ」。あなたの解答は「<%= @answers[:answer2] %>」でした。</p>
+  <p>正解は「しいざあ」。<br>あなたの解答は「<%= @answers[:answer2] %>」でした。</p>
   <p>3. 天響</p>
-  <p>正解は「てぃな」。あなたの解答は「<%= @answers[:answer3] %>」でした。</p>
+  <p>正解は「てぃな」。<br>あなたの解答は「<%= @answers[:answer3] %>」でした。</p>
+  <p>4. 黄熊</p>
+  <p>正解は「ぷう」。<br>あなたの解答は「<%= @answers[:answer4] %>」でした。</p>
+  <p>5. 泡姫</p>
+  <p>正解は「ありえる」。<br>あなたの解答は「<%= @answers[:answer5] %>」でした。</p>
+  <p>6. 男</p>
+  <p>正解は「あだむ」。<br>あなたの解答は「<%= @answers[:answer6] %>」でした。</p>
+  <p>7. 匠音</p>
+  <p>正解は「しょーん」。<br>あなたの解答は「<%= @answers[:answer7] %>」でした。</p>
   <br>
-  <p>あなたの点数は3点中<%= @calculations %>点でした。</p>
-  <% if @calculations >= 2 %>
-    <p>合格です。</p>
+  <p>あなたの点数は7点中<%= @calculations %>点でした。</p>
+  <% if @calculations >= 4 %>
+    <p><b>合格です。</b></p>
   <% else %>
-    <p>不合格です。</p>
+    <p><b>不合格です。</b></p>
   <% end %>
   <br>
-  <%= link_to "もう一回やる", root_path %>
+  <%= link_to "もう一回やる", root_path, class: "button" %>
 </div>
