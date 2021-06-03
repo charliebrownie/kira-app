@@ -1,0 +1,19 @@
+<h1 class="c-heading">キラキラネームクイズ <br>2級試験</h1>
+<div class = "gray-line">
+  <p class="c-title">解答</p>
+  <p> 1. 本気</p>
+  <p>正解は「まじ」。あなたの解答は「<%= @answers[:answer1] %>」でした。</p>
+  <p>2. 皇帝</p>
+  <p>正解は「しいざあ」。あなたの解答は「<%= @answers[:answer2] %>」でした。</p>
+  <p>3. 天響</p>
+  <p>正解は「てぃな」。あなたの解答は「<%= @answers[:answer3] %>」でした。</p>
+  <br>
+  <p>あなたの点数は3点中<%= @calculations %>点でした。</p>
+  <% if @calculations >= 2 %>
+    <p>合格です。</p>
+  <% else %>
+    <p>不合格です。</p>
+  <% end %>
+  <br>
+  <%= link_to "もう一回やる", root_path %>
+</div>
