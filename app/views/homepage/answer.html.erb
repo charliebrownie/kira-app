@@ -1,19 +1,19 @@
 <h1 class="c-heading">キラキラネームクイズ <br>2級試験</h1>
 <div class = "gray-line">
   <p class="c-title">解答</p>
-  <p> 1. 本気</p>
+  <p> 1. 本気<% if @answers[:answer1] == @right_answers[0] %>　○<% else %>　×</p><% end %>
   <p>正解は「まじ」。<br>あなたの解答は「<%= @answers[:answer1] %>」でした。</p>
-  <p>2. 皇帝</p>
+  <p>2. 皇帝<% if @answers[:answer1] == @right_answers[0] %>　○<% else %>　×</p><% end %>
   <p>正解は「しいざあ」。<br>あなたの解答は「<%= @answers[:answer2] %>」でした。</p>
-  <p>3. 天響</p>
+  <p>3. 天響<% if @answers[:answer1] == @right_answers[0] %>　○<% else %>　×</p><% end %>
   <p>正解は「てぃな」。<br>あなたの解答は「<%= @answers[:answer3] %>」でした。</p>
-  <p>4. 黄熊</p>
+  <p>4. 黄熊<% if @answers[:answer1] == @right_answers[0] %>　○<% else %>　×</p><% end %>
   <p>正解は「ぷう」。<br>あなたの解答は「<%= @answers[:answer4] %>」でした。</p>
-  <p>5. 泡姫</p>
+  <p>5. 泡姫<% if @answers[:answer1] == @right_answers[0] %>　○<% else %>　×</p><% end %>
   <p>正解は「ありえる」。<br>あなたの解答は「<%= @answers[:answer5] %>」でした。</p>
-  <p>6. 男</p>
+  <p>6. 男<% if @answers[:answer1] == @right_answers[0] %>　○<% else %>　×</p><% end %>
   <p>正解は「あだむ」。<br>あなたの解答は「<%= @answers[:answer6] %>」でした。</p>
-  <p>7. 匠音</p>
+  <p>7. 匠音<% if @answers[:answer1] == @right_answers[0] %>　○<% else %>　×</p><% end %>
   <p>正解は「しょーん」。<br>あなたの解答は「<%= @answers[:answer7] %>」でした。</p>
   <br>
   <p>あなたの点数は7点中<%= @calculations %>点でした。</p>

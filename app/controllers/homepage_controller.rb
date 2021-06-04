@@ -5,6 +5,7 @@ class HomepageController < ApplicationController
   def answer
     @answers = all_answers
     @calculations = calculations
+    @right_answers = ["まじ", "しいざあ", "てぃな", "ぷう", "ありえる", "あだむ", "しょーん"]
   end
 
   private
