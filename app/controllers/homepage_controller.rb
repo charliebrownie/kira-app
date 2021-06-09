@@ -13,25 +13,25 @@ class HomepageController < ApplicationController
 
   def answer_one
     @answers = all_answers
-    @calculations = calculations
+    @calculations = calculations_one
     @right_answers = ["しえる", "ななあん", "えでぃ", "てん", "きらら", "きてぃ", "やから"]
   end
 
   def answer_preone
     @answers = all_answers
-    @calculations = calculations
+    @calculations = calculations_preone
     @right_answers = ["しゃありん", "ぴいな", "ぺこ", "りいだ", "ろーら", "ないき", "さんた"]
   end
 
   def answer_two
     @answers = all_answers
-    @calculations = calculations
+    @calculations = calculations_two
     @right_answers = ["まじ", "しいざあ", "てぃな", "ぷう", "ありえる", "あだむ", "しょーん"]
   end
 
   def answer_three
     @answers = all_answers
-    @calculations = calculations
+    @calculations = calculations_three
     @right_answers = ["はーもにー", "ぴんく", "どれみ", "ろまん", "ぽえむ", "さんば", "さいん"]
   end
 
@@ -40,8 +40,50 @@ class HomepageController < ApplicationController
     params.permit(:answer1, :answer2, :answer3, :answer4, :answer5, :answer6, :answer7)
   end
 
-  def calculations
+  def calculations_one
+    right_answers = ["しえる", "ななあん", "えでぃ", "てん", "きらら", "きてぃ", "やから"]
+    score = 0
+    answers = all_answers
+    answers.each{|key, value|
+      right_answers.each do |right|
+        if value == right
+          score += 1
+        end
+      end
+    }
+    score
+  end
+
+  def calculations_preone
+    right_answers = ["しゃありん", "ぴいな", "ぺこ", "りいだ", "ろーら", "ないき", "さんた"]
+    score = 0
+    answers = all_answers
+    answers.each{|key, value|
+      right_answers.each do |right|
+        if value == right
+          score += 1
+        end
+      end
+    }
+    score
+  end
+
+  def calculations_two
     right_answers = ["まじ", "しいざあ", "てぃな", "ぷう", "ありえる", "あだむ", "しょーん"]
+    score = 0
+    answers = all_answers
+    answers.each{|key, value|
+      right_answers.each do |right|
+        if value == right
+          score += 1
+        end
+      end
+    }
+    score
+  end
+
+  def calculations_three
+    right_answers = ["はーもにー", "ぴんく", "どれみ", "ろまん", "ぽえむ", "さんば", "さいん"]
     score = 0
     answers = all_answers
     answers.each{|key, value|
