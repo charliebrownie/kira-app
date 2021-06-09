@@ -1,0 +1,28 @@
+<h1 class="c-heading">キラキラネームクイズ <br>1級試験</h1>
+<div class = "gray-line">
+  <p class="c-title">解答</p>
+  <p> 1. 虹<% if @answers[:answer1] == @right_answers[0] %>　○<% else %>　×</p><% end %>
+  <p>正解は「しえる」。<br>あなたの解答は「<%= @answers[:answer1] %>」でした。</p>
+  <p>2. 奈々安寿恵里<% if @answers[:answer2] == @right_answers[1] %>　○<% else %>　×</p><% end %>
+  <p>正解は「ななあん」。<br>あなたの解答は「<%= @answers[:answer2] %>」でした。</p>
+  <p>3. 恵逞<% if @answers[:answer3] == @right_answers[2] %>　○<% else %>　×</p><% end %>
+  <p>正解は「えでぃ」。<br>あなたの解答は「<%= @answers[:answer3] %>」でした。</p>
+  <p>4. 大宙<% if @answers[:answer4] == @right_answers[3] %>　○<% else %>　×</p><% end %>
+  <p>正解は「てん」。<br>あなたの解答は「<%= @answers[:answer4] %>」でした。</p>
+  <p>5. 苺姫<% if @answers[:answer5] == @right_answers[4] %>　○<% else %>　×</p><% end %>
+  <p>正解は「きらら」。<br>あなたの解答は「<%= @answers[:answer5] %>」でした。</p>
+  <p>6. 希星<% if @answers[:answer6] == @right_answers[5] %>　○<% else %>　×</p><% end %>
+  <p>正解は「きてぃ」。<br>あなたの解答は「<%= @answers[:answer6] %>」でした。</p>
+  <p>7. 族<% if @answers[:answer7] == @right_answers[6] %>　○<% else %>　×</p><% end %>
+  <p>正解は「やから」。<br>あなたの解答は「<%= @answers[:answer7] %>」でした。</p>
+  <br>
+  <p>あなたの点数は7点中<%= @calculations %>点でした。</p>
+  <% if @calculations >= 4 %>
+    <p><b>合格です。</b></p>
+  <% else %>
+    <p><b>不合格です。</b></p>
+  <% end %>
+  <br>
+  <%= link_to "もう一回やる", test_one_path, class: "button" %>
+  <%= link_to "別の級を受験する", root_path, class: "button" %>
+</div>

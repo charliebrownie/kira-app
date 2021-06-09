@@ -1,0 +1,23 @@
+<h1 class="c-heading">キラキラネームクイズ <br>3級試験</h1>
+<div class = "gray-line">
+  <p>以下の名前の読み方をひらがなで答えよ。</p>
+
+  <%= form_with(url: answer_three_path, local: true) do |form| %>
+  <p>1. 葉萌似</p>
+    <%= form.text_field :answer1 %>
+  <p>2. 桃花</p>
+    <%= form.text_field :answer2 %>
+  <p>3. 七音</p>
+    <%= form.text_field :answer3 %>
+  <p>4. 夢見</p>
+    <%= form.text_field :answer4 %>
+  <p>5. 詩</p>
+    <%= form.text_field :answer5 %>
+  <p>6. 波波波</p>
+    <%= form.text_field :answer6 %>
+  <p>7. 正弦</p>
+    <%= form.text_field :answer7 %>
+    <br><br>
+    <%= form.submit "提出する", class: "button" %>
+  <% end %>
+</div>

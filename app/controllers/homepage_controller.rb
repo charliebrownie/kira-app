@@ -1,11 +1,38 @@
 class HomepageController < ApplicationController
-  def home
+  def test_one
   end
 
-  def answer
+  def test_preone
+  end
+
+  def test_two
+  end
+
+  def test_three
+  end
+
+  def answer_one
+    @answers = all_answers
+    @calculations = calculations
+    @right_answers = ["しえる", "ななあん", "えでぃ", "てん", "きらら", "きてぃ", "やから"]
+  end
+
+  def answer_preone
+    @answers = all_answers
+    @calculations = calculations
+    @right_answers = ["しゃありん", "ぴいな", "ぺこ", "りいだ", "ろーら", "ないき", "さんた"]
+  end
+
+  def answer_two
     @answers = all_answers
     @calculations = calculations
     @right_answers = ["まじ", "しいざあ", "てぃな", "ぷう", "ありえる", "あだむ", "しょーん"]
+  end
+
+  def answer_three
+    @answers = all_answers
+    @calculations = calculations
+    @right_answers = ["はーもにー", "ぴんく", "どれみ", "ろまん", "ぽえむ", "さんば", "さいん"]
   end
 
   private
@@ -25,5 +52,9 @@ class HomepageController < ApplicationController
       end
     }
     score
+  end
+
+  def menu
+
   end
 end
