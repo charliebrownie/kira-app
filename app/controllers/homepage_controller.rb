@@ -14,25 +14,25 @@ class HomepageController < ApplicationController
   def answer_one
     @answers = all_answers
     @calculations = calculations_one
-    @right_answers = ["しえる", "ななあん", "えでぃ", "てん", "きらら", "きてぃ", "やから"]
+    @right_answers = right_answers_one
   end
 
   def answer_preone
     @answers = all_answers
     @calculations = calculations_preone
-    @right_answers = ["しゃありん", "ぴいな", "ぺこ", "りいだ", "ろーら", "ないき", "さんた"]
+    @right_answers = right_answers_preone
   end
 
   def answer_two
     @answers = all_answers
     @calculations = calculations_two
-    @right_answers = ["まじ", "しいざあ", "てぃな", "ぷう", "ありえる", "あだむ", "しょーん"]
+    @right_answers = right_answers_two
   end
 
   def answer_three
     @answers = all_answers
     @calculations = calculations_three
-    @right_answers = ["はーもにー", "ぴんく", "どれみ", "ろまん", "ぽえむ", "さんば", "さいん"]
+    @right_answers = right_answers_three
   end
 
   private
@@ -41,11 +41,10 @@ class HomepageController < ApplicationController
   end
 
   def calculations_one
-    right_answers = ["しえる", "ななあん", "えでぃ", "てん", "きらら", "きてぃ", "やから"]
     score = 0
     answers = all_answers
     answers.each{|key, value|
-      right_answers.each do |right|
+      right_answers_one.each do |right|
         if value == right
           score += 1
         end
@@ -55,11 +54,10 @@ class HomepageController < ApplicationController
   end
 
   def calculations_preone
-    right_answers = ["しゃありん", "ぴいな", "ぺこ", "りいだ", "ろーら", "ないき", "さんた"]
     score = 0
     answers = all_answers
     answers.each{|key, value|
-      right_answers.each do |right|
+      right_answers_preone.each do |right|
         if value == right
           score += 1
         end
@@ -69,11 +67,10 @@ class HomepageController < ApplicationController
   end
 
   def calculations_two
-    right_answers = ["まじ", "しいざあ", "てぃな", "ぷう", "ありえる", "あだむ", "しょーん"]
     score = 0
     answers = all_answers
     answers.each{|key, value|
-      right_answers.each do |right|
+      right_answers_two.each do |right|
         if value == right
           score += 1
         end
@@ -83,11 +80,10 @@ class HomepageController < ApplicationController
   end
 
   def calculations_three
-    right_answers = ["はーもにー", "ぴんく", "どれみ", "ろまん", "ぽえむ", "さんば", "さいん"]
     score = 0
     answers = all_answers
     answers.each{|key, value|
-      right_answers.each do |right|
+      right_answers_three.each do |right|
         if value == right
           score += 1
         end
@@ -96,7 +92,20 @@ class HomepageController < ApplicationController
     score
   end
 
-  def menu
-
+  def right_answers_one
+    right_answers = ["しえる", "ななあん", "えでぃ", "てん", "きらら", "きてぃ", "やから"]
   end
+
+  def right_answers_preone
+    right_answers = ["しゃありん", "ぴいな", "ぺこ", "りいだ", "ろーら", "ないき", "さんた"]
+  end
+
+  def right_answers_two
+    right_answers = ["まじ", "しいざあ", "てぃな", "ぷう", "ありえる", "あだむ", "しょーん"]
+  end
+
+  def right_answers_three
+    right_answers = ["はーもにー", "ぴんく", "どれみ", "ろまん", "ぽえむ", "さんば", "さいん"]
+  end
+
 end
