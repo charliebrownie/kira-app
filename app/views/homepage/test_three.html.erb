@@ -1,8 +1,8 @@
 <h1 class="c-heading">キラキラネームクイズ <br>3級試験</h1>
-<div class = "gray-line">
+<div class = "gray-line__test">
   <p>以下の名前の読み方をひらがなで答えよ。</p>
 
-  <%= form_with(url: answer_three_path, local: true) do |form| %>
+  <%= form_with(model: @user_answer, url: answer_three_path, local: true) do |form| %>
   <p>1. 葉萌似</p>
     <%= form.text_field :answer1 %>
   <p>2. 桃花</p>
@@ -18,6 +18,8 @@
   <p>7. 正弦</p>
     <%= form.text_field :answer7 %>
     <br><br>
+    <%= form.hidden_field :test_num, value: 1 %>
+    <%= form.hidden_field :grade, value: 1 %>
     <%= form.submit "提出する", class: "button" %>
   <% end %>
 </div>

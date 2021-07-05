@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   get "/test_two", to: 'homepage#test_two'
   get "/test_preone", to: 'homepage#test_preone'
   get "/test_one", to: 'homepage#test_one'
+  get "/new", to: 'homepage#new'
+  get "/answer_new", to: 'homepage#answer_new'
+  post "/answer_new", to: 'homepage#answer_new'
 end

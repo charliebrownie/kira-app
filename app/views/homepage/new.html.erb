@@ -1,0 +1,23 @@
+<h1 class="c-heading">キラキラネームクイズ <br>1級試験</h1>
+<div class = "gray-line">
+  <p>以下の名前の読み方をひらがなで答えよ。</p>
+
+  <%= form_with(model: @user_answer, url: answer_new_path, local: true) do |form| %>
+  <p>1. Color of apple </p>
+    <%= form.text_field :answer1 %>
+  <p>2. Color of orange</p>
+    <%= form.text_field :answer2 %>
+  <p>3. Color of banana</p>
+    <%= form.text_field :answer3 %>
+  <p>4. Color of kiwi</p>
+    <%= form.text_field :answer4 %>
+  <p>5. Color of grape</p>
+    <%= form.text_field :answer5 %>
+  <p>6. Color of melon</p>
+    <%= form.text_field :answer6 %>
+  <p>7. Color of water</p>
+    <%= form.text_field :answer7 %>
+    <br><br>
+    <%= form.submit "提出する", class: "button" %>
+  <% end %>
+</div>
