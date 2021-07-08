@@ -4,20 +4,20 @@
     <div class = "l-contents__inner l-contents--side-right">
       <div class="l-contents__main">
         <p class="c-title">解答</p>
-        <p><b> 1. 本気</b><% if @answers[:answer1] == @right_answers[0] %>　○<% else %>　×</p><% end %>
-        <p>正解は「まじ」。<br>あなたの解答は「<%= @answers[:answer1] %>」でした。</p>
-        <p><b>2. 皇帝</b><% if @answers[:answer2] == @right_answers[1] %>　○<% else %>　×</p><% end %>
-        <p>正解は「しいざあ」。<br>あなたの解答は「<%= @answers[:answer2] %>」でした。</p>
-        <p><b>3. 天響</b><% if @answers[:answer3] == @right_answers[2] %>　○<% else %>　×</p><% end %>
-        <p>正解は「てぃな」。<br>あなたの解答は「<%= @answers[:answer3] %>」でした。</p>
-        <p><b>4. 黄熊</b><% if @answers[:answer4] == @right_answers[3] %>　○<% else %>　×</p><% end %>
-        <p>正解は「ぷう」。<br>あなたの解答は「<%= @answers[:answer4] %>」でした。</p>
-        <p><b>5. 泡姫</b><% if @answers[:answer5] == @right_answers[4] %>　○<% else %>　×</p><% end %>
-        <p>正解は「ありえる」。<br>あなたの解答は「<%= @answers[:answer5] %>」でした。</p>
-        <p><b>6. 男</b><% if @answers[:answer6] == @right_answers[5] %>　○<% else %>　×</p><% end %>
-        <p>正解は「あだむ」。<br>あなたの解答は「<%= @answers[:answer6] %>」でした。</p>
-        <p><b>7. 匠音</b><% if @answers[:answer7] == @right_answers[6] %>　○<% else %>　×</p><% end %>
-        <p>正解は「しょーん」。<br>あなたの解答は「<%= @answers[:answer7] %>」でした。</p>
+        <p><b>1. <%= @questions.all[0].question %><% if @answers[:answer1] == @right_answers[0].answer %>　○<% else %>　×</p><% end %></b>
+        <p>正解は「<%= @questions.all[0].answer %>」。<br>あなたの解答は「<%= @answers[:answer1] %>」でした。</p>
+        <p><b>2. <%= @questions.all[1].question %><% if @answers[:answer2] == @right_answers[1].answer %>　○<% else %>　×</p><% end %></b>
+        <p>正解は「<%= @questions.all[1].answer %>」。<br>あなたの解答は「<%= @answers[:answer2] %>」でした。</p>
+        <p><b>3. <%= @questions.all[2].question %><% if @answers[:answer3] == @right_answers[2].answer %>　○<% else %>　×</p><% end %></b>
+        <p>正解は「<%= @questions.all[2].answer %>」。<br>あなたの解答は「<%= @answers[:answer3] %>」でした。</p>
+        <p><b>4. <%= @questions.all[3].question %><% if @answers[:answer4] == @right_answers[3].answer %>　○<% else %>　×</p><% end %></b>
+        <p>正解は「<%= @questions.all[3].answer %>」。<br>あなたの解答は「<%= @answers[:answer4] %>」でした。</p>
+        <p><b>5. <%= @questions.all[4].question %><% if @answers[:answer5] == @right_answers[4].answer %>　○<% else %>　×</p><% end %></b>
+        <p>正解は「<%= @questions.all[4].answer %>」。<br>あなたの解答は「<%= @answers[:answer5] %>」でした。</p>
+        <p><b>6. <%= @questions.all[5].question %><% if @answers[:answer6] == @right_answers[5].answer %>　○<% else %>　×</p><% end %></b>
+        <p>正解は「<%= @questions.all[5].answer %>」。<br>あなたの解答は「<%= @answers[:answer6] %>」でした。</p>
+        <p><b>7. <%= @questions.all[6].question %><% if @answers[:answer7] == @right_answers[6].answer %>　○<% else %>　×</p><% end %></b>
+        <p>正解は「<%= @questions.all[6].answer %>」。<br>あなたの解答は「<%= @answers[:answer7] %>」でした。</p>
         <br>
         <p>あなたの点数は7点中<%= @calculations %>点でした。</p>
         <% if @calculations >= 4 %>
@@ -27,7 +27,6 @@
         <% end %>
         <br>
       </div>
-
       <div class="l-contents__side">
         <p class="c-title">他の人の解答<br></p>
         <p>

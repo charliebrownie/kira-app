@@ -4,20 +4,20 @@
     <div class = "l-contents__inner l-contents--side-right">
       <div class="l-contents__main">
         <p class="c-title">解答</p>
-        <p><b> 1. 葉萌似</b><% if @answers[:answer1] == @right_answers[0] %>　○<% else %>　×</p><% end %>
-        <p>正解は「はーもにー」。<br>あなたの解答は「<%= @answers[:answer1] %>」でした。</p>
-        <p><b>2. 桃花</b><% if @answers[:answer2] == @right_answers[1] %>　○<% else %>　×</p><% end %>
-        <p>正解は「ぴんく」。<br>あなたの解答は「<%= @answers[:answer2] %>」でした。</p>
-        <p><b>3. 七音</b><% if @answers[:answer3] == @right_answers[2] %>　○<% else %>　×</p><% end %>
-        <p>正解は「どれみ」。<br>あなたの解答は「<%= @answers[:answer3] %>」でした。</p>
-        <p><b>4. 夢見</b><% if @answers[:answer4] == @right_answers[3] %>　○<% else %>　×</p><% end %>
-        <p>正解は「ろまん」。<br>あなたの解答は「<%= @answers[:answer4] %>」でした。</p>
-        <p><b>5. 詩</b><% if @answers[:answer5] == @right_answers[4] %>　○<% else %>　×</p><% end %>
-        <p>正解は「ぽえむ」。<br>あなたの解答は「<%= @answers[:answer5] %>」でした。</p>
-        <p><b>6. 波波波</b><% if @answers[:answer6] == @right_answers[5] %>　○<% else %>　×</p><% end %>
-        <p>正解は「さんば」。<br>あなたの解答は「<%= @answers[:answer6] %>」でした。</p>
-        <p><b>7. 正弦</b><% if @answers[:answer7] == @right_answers[6] %>　○<% else %>　×</p><% end %>
-        <p>正解は「さいん」。<br>あなたの解答は「<%= @answers[:answer7] %>」でした。</p>
+        <p><b>1. <%= @questions.all[0].question %><% if @answers[:answer1] == @right_answers[0].answer %>　○<% else %>　×</p><% end %></b>
+        <p>正解は「<%= @questions.all[0].answer %>」。<br>あなたの解答は「<%= @answers[:answer1] %>」でした。</p>
+        <p><b>2. <%= @questions.all[1].question %><% if @answers[:answer2] == @right_answers[1].answer %>　○<% else %>　×</p><% end %></b>
+        <p>正解は「<%= @questions.all[1].answer %>」。<br>あなたの解答は「<%= @answers[:answer2] %>」でした。</p>
+        <p><b>3. <%= @questions.all[2].question %><% if @answers[:answer3] == @right_answers[2].answer %>　○<% else %>　×</p><% end %></b>
+        <p>正解は「<%= @questions.all[2].answer %>」。<br>あなたの解答は「<%= @answers[:answer3] %>」でした。</p>
+        <p><b>4. <%= @questions.all[3].question %><% if @answers[:answer4] == @right_answers[3].answer %>　○<% else %>　×</p><% end %></b>
+        <p>正解は「<%= @questions.all[3].answer %>」。<br>あなたの解答は「<%= @answers[:answer4] %>」でした。</p>
+        <p><b>5. <%= @questions.all[4].question %><% if @answers[:answer5] == @right_answers[4].answer %>　○<% else %>　×</p><% end %></b>
+        <p>正解は「<%= @questions.all[4].answer %>」。<br>あなたの解答は「<%= @answers[:answer5] %>」でした。</p>
+        <p><b>6. <%= @questions.all[5].question %><% if @answers[:answer6] == @right_answers[5].answer %>　○<% else %>　×</p><% end %></b>
+        <p>正解は「<%= @questions.all[5].answer %>」。<br>あなたの解答は「<%= @answers[:answer6] %>」でした。</p>
+        <p><b>7. <%= @questions.all[6].question %><% if @answers[:answer7] == @right_answers[6].answer %>　○<% else %>　×</p><% end %></b>
+        <p>正解は「<%= @questions.all[6].answer %>」。<br>あなたの解答は「<%= @answers[:answer7] %>」でした。</p>
         <br>
         <p>あなたの点数は7点中<%= @calculations %>点でした。</p>
         <% if @calculations >= 4 %>
@@ -27,34 +27,35 @@
         <% end %>
         <br>
       </div>
+
       <div class="l-contents__side">
         <p class="c-title">他の人の解答<br></p>
         <p>
-        1. <b><%= @questions.all[0].question %></b>
+        <b>1. <%= @questions.all[0].question %></b>
         <% @others_answers.pluck(:answer1).shuffle.sample(3).each do |other| %>
         <br><%= other %>
         <% end %><br>
-        <br>2. <b><%= @questions.all[1].question %></b>
+        <br><b>2. <%= @questions.all[1].question %></b>
         <% @others_answers.pluck(:answer2).shuffle.sample(3).each do |other| %>
         <br><%= other %>
         <% end %><br>
-        <br>3. <b><%= @questions.all[2].question %></b>
+        <br><b>3. <%= @questions.all[2].question %></b>
         <% @others_answers.pluck(:answer3).shuffle.sample(3).each do |other| %>
         <br><%= other %>
         <% end %><br>
-        <br>4. <b><%= @questions.all[3].question %></b>
+        <br><b>4. <%= @questions.all[3].question %></b>
         <% @others_answers.pluck(:answer4).shuffle.sample(3).each do |other| %>
         <br><%= other %>
         <% end %><br>
-        <br>5. <b><%= @questions.all[4].question %></b>
+        <br><b>5. <%= @questions.all[4].question %></b>
         <% @others_answers.pluck(:answer5).shuffle.sample(3).each do |other| %>
         <br><%= other %>
         <% end %><br>
-        <br>6. <b><%= @questions.all[5].question %></b>
+        <br><b>6. <%= @questions.all[5].question %></b>
         <% @others_answers.pluck(:answer6).shuffle.sample(3).each do |other| %>
         <br><%= other %>
         <% end %><br>
-        <br>7. <b><%= @questions.all[6].question %></b>
+        <br><b>7. <%= @questions.all[6].question %></b>
         <% @others_answers.pluck(:answer7).shuffle.sample(3).each do |other| %>
         <br><%= other %>
         <% end %><br>
@@ -63,7 +64,7 @@
     </div>
   </div>
 </div>
-<br>        
+<br>       
 <%= link_to "もう一回やる", test_three_path, class: "button" %>
 <%= link_to "別の級を受験する", root_path, class: "button" %>
 </div>
