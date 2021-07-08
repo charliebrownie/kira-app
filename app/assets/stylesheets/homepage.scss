@@ -250,6 +250,13 @@
 
   .gray-line {
     margin-top: 42px;
+    padding: 20px 12px 0px 12px;
+    border-top: solid 3px #efefef;
+    text-align: center;
+  }
+
+  .gray-line__test{
+    margin-top: 42px;
     padding: 20px 12px;
     border-top: solid 3px #efefef;
     text-align: center;
@@ -281,8 +288,7 @@
     font-size: 28px;
   }
 
-  .button {
-    display: block;
+  .test-button {
     margin: 0px 10px 10px 10px;
     padding: 0px 10px 10px 10px;
     height: 38px;
@@ -292,5 +298,29 @@
     border-radius: 19px;
     background-color: #efefef;
     cursor: pointer;
+  }
+
+  .button {
+    display: block;
+    margin: 0px 10px 10px 10px;
+    padding: 10px 10px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 19px;
+    background-color: #efefef;
+    cursor: pointer;
+  }
+
+  .l-contents__side {
+    background-color: #efefef;
+    padding: 10px 30px 0px 30px;
+    margin-top: 20px;
+  }
+
+  .l-contents__main {
+    background-color: #efefef;
+    padding: 10px 30px 30px 30px;
   }
 }
